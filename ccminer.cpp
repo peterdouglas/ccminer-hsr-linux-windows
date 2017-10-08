@@ -272,6 +272,7 @@ Options:\n\
 			x11         X11 (DarkCoin)\n\
 			x13         X13 (MaruCoin)\n\
 			x14         X14\n\
+			hsr         HCash\n\
 			x15         X15\n\
 			x17         X17\n\
 			wildkeccak  Boolberry\n\
@@ -2143,6 +2144,7 @@ static void *miner_thread(void *userdata)
 				minmax = 0x400000;
 				break;
 			case ALGO_X14:
+			case ALGO_HSR:
 			case ALGO_X15:
 				minmax = 0x400000;
 				break;
@@ -2372,6 +2374,9 @@ static void *miner_thread(void *userdata)
 		case ALGO_X14:
 			rc = scanhash_hsr(thr_id, &work, max_nonce, &hashes_done);
 			break;
+		case ALGO_HSR:
+		rc = scanhash_hsr(thr_id, &work, max_nonce, &hashes_done);
+		break;
 		case ALGO_X15:
 			rc = scanhash_x15(thr_id, &work, max_nonce, &hashes_done);
 			break;
