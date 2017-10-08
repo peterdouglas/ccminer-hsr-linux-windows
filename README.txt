@@ -119,6 +119,7 @@ its command line interface and options.
                           x11evo      use to mine Revolver
                           x11         use to mine DarkCoin
                           x14         use to mine X14Coin
+                          HSR         use to mine HCash/HShare
                           x15         use to mine Halcyon
                           x17         use to mine X17
                           x17         use to mine X17
